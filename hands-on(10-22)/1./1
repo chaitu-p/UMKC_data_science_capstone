@@ -1,0 +1,32 @@
+Environment Setup
+To begin, participants should set up their development environment by installing the necessary libraries for Streamlit and the models they plan to use, such as PyTorch (for deep learning) or Hugging Face (for language models).
+
+Steps:
+
+Install Python (if not installed): Ensure that Python (version 3.7 or higher) is installed. You can download it from here.
+
+Create a virtual environment (optional but recommended):
+
+bash
+python -m venv streamlit_env
+Activate the virtual environment:
+
+On Windows: streamlit_env\Scripts\activate
+On macOS/Linux: source streamlit_env/bin/activate
+Install Streamlit:
+
+bash
+pip install streamlit
+Install necessary libraries: Depending on the models you plan to use, install the required libraries:
+
+For PyTorch (deep learning models):
+bash
+pip install torch torchvision Pillow
+
+For Hugging Face Transformers (LLM models):
+bash
+pip install transformers
+Run the Streamlit app: After installing the libraries, you can start Streamlit by running:
+
+bash
+streamlit run app.py
