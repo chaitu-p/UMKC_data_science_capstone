@@ -1,0 +1,31 @@
+Model Preparation
+Next, load and prepare a deep learning or language model. Ensure the models are optimized for inference locally or on edge devices.
+
+Steps:
+
+Deep Learning Model (e.g., ResNet for Image Classification):
+
+We’ll use a pre-trained ResNet model from PyTorch’s torchvision library.
+Use the following to load the model:
+python
+import torch
+from torchvision import models
+
+# Load pre-trained ResNet model
+model = models.resnet50(pretrained=True)
+model.eval()  # Set the model to evaluation mode
+LLM (e.g., Summarization using Hugging Face Transformers):
+
+Load a pre-trained language model for tasks like summarization or sentiment analysis:
+python
+from transformers import pipeline
+
+# Load summarization pipeline
+summarizer = pipeline("summarization")
+Optimize Models for Inference:
+
+Ensure the models are in evaluation mode by using .eval().
+For local inference, ensure that the device (CPU or GPU) is appropriately used. You can move the model to a device using:
+python
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+model.to(device)
