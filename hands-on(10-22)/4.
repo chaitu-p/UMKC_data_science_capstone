@@ -1,0 +1,27 @@
+Model Inference and Result Display
+Guide participants to integrate the loaded models into the Streamlit app to process inputs and generate predictions.
+
+Steps:
+
+For Image Classification:
+
+After the user uploads an image, process it and use the deep learning model for prediction:
+python
+def predict_image_class(image, model):
+    transform = transforms.Compose([transforms.Resize(256),
+                                    transforms.CenterCrop(224),
+                                    transforms.ToTensor(),
+                                    transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])])
+    image = transform(image).unsqueeze(0)
+    with torch.no_grad():
+        output = model(image)
+    _, predicted = torch.max(output, 1)
+    return predicted.item()
+For Text Summarization:
+
+Upon user input, pass the text to the summarization model:
+python
+if st.button("Summarize"):
+    summarizer = load_text_summarization_model()
+    summary = summarizer(user_text, max_length=50, min_length=25, do_sample=False)
+    st.write("Summary:", summary[0]['summary_text'])
