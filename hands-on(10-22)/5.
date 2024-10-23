@@ -1,0 +1,14 @@
+App Testing
+Encourage participants to thoroughly test their applications by providing different inputs.
+
+Steps:
+
+Test Image Classification:
+
+Upload various images to see how the model performs. Test with both simple and complex images.
+Test Text Summarization:
+
+Input various types of text (short, long, factual, or creative) to see how well the language model summarizes the input.
+Check Performance:
+
+Ensure that the application runs smoothly by checking the latency of model predictions and the responsiveness of the app.
