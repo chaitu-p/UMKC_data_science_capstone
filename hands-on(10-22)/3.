@@ -1,0 +1,25 @@
+Building the Streamlit Interface
+Guide participants in creating an interactive interface where users can provide input, such as image uploads or text areas.
+
+Steps:
+
+Create File Upload for Image Classification:
+
+Use Streamlit's file_uploader() for uploading images:
+python
+uploaded_image = st.file_uploader("Choose an image...", type="jpg")
+if uploaded_image is not None:
+    image = Image.open(uploaded_image)
+    st.image(image, caption='Uploaded Image', use_column_width=True)
+Create Text Area for LLM Tasks:
+
+Use text_area() for entering text to be processed by the LLM model:
+python
+user_text = st.text_area("Enter text for summarization")
+Add buttons for triggering model inference:
+
+For example, a button to trigger the summarization process:
+python
+if st.button("Summarize"):
+    summary = summarizer(user_text, max_length=50, min_length=25, do_sample=False)
+    st.write("Summary:", summary[0]['summary_text'])
