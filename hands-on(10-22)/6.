@@ -1,0 +1,8 @@
+Potential Extensions
+Participants can extend their applications by:
+
+Improving the UI: Add better navigation, styling, or more detailed visualizations for the predictions.
+Adding More Models: Integrate multiple models to allow for different tasks (e.g., both sentiment analysis and summarization).
+Deployment: Guide participants to deploy their Streamlit apps on platforms like Heroku or Streamlit Cloud.
+
+By following this step-by-step approach, participants will be able to successfully set up, build, and test a fully functional Streamlit application that integrates both deep learning and language models.
